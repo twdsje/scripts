@@ -3,9 +3,9 @@
 $name = "windowsDiskCleanup"
 $version = "0.2.22"
 
-If ([System.Diagnostics.EventLog]::SourceExists(‘windowsDiskCleanup’) -eq $False) {
+If ([System.Diagnostics.EventLog]::SourceExists('windowsDiskCleanup') -eq $False) {
 
-New-EventLog -LogName Application -Source ‘windowsDiskCleanup’
+New-EventLog -LogName Application -Source 'windowsDiskCleanup'
 
 }
 
