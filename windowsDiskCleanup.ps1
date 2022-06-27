@@ -3,6 +3,12 @@
 $name = "windowsDiskCleanup"
 $version = "0.2.22"
 
+If ([System.Diagnostics.EventLog]::SourceExists(‘windowsDiskCleanup’) -eq $False) {
+
+New-EventLog -LogName Application -Source ‘windowsDiskCleanup’
+
+}
+
 # $objShell = New-Object -ComObject Shell.Application
 # $recycle_bin = $objShell.Namespace(0xA)
 
